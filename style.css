@@ -71,3 +71,7 @@ body {
     display: none;
 }
 
+#drawMessage {
+    color: beige;
+    font-size: 5vmin;
+}
