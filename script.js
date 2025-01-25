@@ -30,6 +30,7 @@ boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turnO) { // Player O turn
             box.innerText = "O";
+            playerColor(box);
             turnO = false;
             count++;
         } else { // Player X turn
@@ -100,6 +101,14 @@ const drawGame = (count) => {
         }
     }
 };
+
+const playerColor = (box) => {
+    if(box.innerText === 'O') {
+        box.style.color = 'green';
+    } else {
+        box.style.color = 'red';
+    }
+}
 
 newGameBt.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
